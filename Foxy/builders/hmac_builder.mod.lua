@@ -1,20 +1,21 @@
-local root 			=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
-local modules 		=	root:WaitForChild("modules");
-local encryption 	=	modules:WaitForChild("encryption");
+-- Setting up the path to the Encryption Application.
+local Root				=  game:GetService("ServerScriptService").Foxy.modules.lockbox;
+local lockbox 			=  require(Root.lockbox);
 
+lockbox.bit   			=  require(Root.Parent.bit).bit;
 
-local array 		= 	require(encryption.util.array);
-local stream 		= 	require(encryption.util.stream)
-local base64 		= 	require(encryption.util.base64)
-local hmac 			= 	require(encryption.mac.hmac)
-local sha256 		= 	require(encryption.digest.sha2_256);
+-- Import our files
+local array 			= require(lockbox.util.array)
+local stream 			= require(lockbox.util.stream)
+local base64 			= require(lockbox.util.base64)
+local hmac 				= require(lockbox.mac.hmac)
+local sha256 			= require(lockbox.digest.sha2_256);
 
 
 -- Create our Module
-local builder 		=	{};
+local Builder 			=	{};
 
-function builder:build(key, body)
-
+function Builder:build(key, body)
 	local hmacBuilder = hmac()
 		.setBlockSize(64)
 		.setDigest(sha256)
@@ -25,4 +26,4 @@ function builder:build(key, body)
 	return base64.fromArray(hmacBuilder.asBytes())
 end
 
-return builder;
+return Builder;
