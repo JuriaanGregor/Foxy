@@ -1,0 +1,238 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 215.0,
+		"last_filter": "boxy",
+		"selected_items":
+		[
+			[
+				"boxy",
+				"Boxy Theme: Activation"
+			],
+			[
+				"package control install",
+				"Package Control: Install Package"
+			],
+			[
+				"package control remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package control list",
+				"Package Control: List Packages"
+			],
+			[
+				"package control : install",
+				"Package Control: Install Package"
+			],
+			[
+				"tasks",
+				"Tasks: New document"
+			],
+			[
+				"notes",
+				"Notes: Inbox"
+			],
+			[
+				"package control instal",
+				"Package Control: Install Package"
+			],
+			[
+				"package control ",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"s s ro",
+				"Set Syntax: ROBLOX Lua"
+			],
+			[
+				"package conrol ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 382.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption"
+	],
+	"file_history":
+	[
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/padding/ansix923.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/padding/isoiec7816.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/padding/pkcs7.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/padding/zero.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/util/array.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/util/base64.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/util/bit.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/modules/bitnumber.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/util/queue.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/util/stream.mod.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/mac/hmac.lua",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Foxy/Encryption/cipher/mode/cbc.lua",
+		"/C/Users/Juriaan Gregor/AppData/Roaming/RIFT/rift.cfg",
+		"/C/Users/Juriaan Gregor/AppData/Roaming/RIFT/recents.cfg",
+		"/C/Users/Juriaan Gregor/AppData/Roaming/RIFT/riftconnect.cfg",
+		"/C/Users/Juriaan Gregor/AppData/Roaming/RIFT/rift.log",
+		"/C/Users/Juriaan Gregor/AppData/Roaming/Sublime Text 3/Packages/User/RbxRefresh.sublime-build",
+		"/C/Users/Juriaan Gregor/Documents/Projecten/Deathrun/ServerScriptService/module.Script.lua",
+		"/C/Users/Juriaan Gregor/Dropbox/Notes/.brain/Inbox.note"
+	],
+	"find":
+	{
+		"height": 51.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"font"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 44.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/RbxRefresh.sublime-build",
+	"project": "Foxy.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
