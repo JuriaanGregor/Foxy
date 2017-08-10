@@ -1,20 +1,17 @@
-local root 			=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
-local modules 		=	root:WaitForChild("modules");
-local encryption 	=	modules:WaitForChild("encryption");
+local Bit = require("lockbox.util.bit");
+local String = require("string");
+local Stream = require("lockbox.util.stream");
+local Array = require("lockbox.util.array");
 
-local Bit 			=	require(encryption.util.bit);
-local Stream 		= 	require(encryption.util.stream);
-local Array 		= 	require(encryption.util.array);
+local XOR = Bit.bxor;
 
-local XOR 			= 	Bit.bxor;
+local HMAC = function()
 
-local HMAC 			= function()
-
-	local public 		= {};
-	local blockSize 	= 64;
-	local Digest 		= nil;
-	local outerPadding 	= {};
-	local innerPadding 	= {}
+	local public = {};
+	local blockSize = 64;
+	local Digest = nil;
+	local outerPadding = {};
+	local innerPadding = {}
 	local digest;
 
 	public.setBlockSize = function(bytes)
