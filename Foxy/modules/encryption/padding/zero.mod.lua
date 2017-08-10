@@ -1,4 +1,8 @@
-local Stream = require("lockbox.util.stream");
+local root 			=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
+local modules 		=	root:WaitForChild("modules");
+local encryption 	=	modules:WaitForChild("encryption");
+
+local Stream 		= 	require(encryption.util.stream);
 
 local ZeroPadding = function(blockSize,byteCount)
 

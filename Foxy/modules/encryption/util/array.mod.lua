@@ -1,23 +1,25 @@
-ocal String = require("string");
-local Bit = require("lockbox.util.bit");
+local root 			=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
+local modules 		=	root:WaitForChild("modules");
+local encryption 	=	modules:WaitForChild("encryption");
 
-local XOR = Bit.bxor;
+local Bit 			=	require(encryption.util.bit);
+local XOR 			= 	Bit.bxor;
 
-local Array = {};
+local Array 		= {};
 
 Array.size = function(array)
 	return #array;
 end
 
-Array.fromString = function(string)
+Array.fromString = function(str)
 	local bytes = {};
 
 	local i=1;
-	local byte = String.byte(string,i);
+	local byte = string.byte(str,i);
 	while byte ~= nil do
 		bytes[i] = byte;
 		i = i + 1;
-		byte = String.byte(string,i);
+		byte = string.byte(str,i);
 	end
 
 	return bytes;
@@ -30,7 +32,7 @@ Array.toString = function(bytes)
 
 	local byte = bytes[i];
 	while byte ~= nil do
-		chars[i] = String.char(byte);
+		chars[i] = string.char(byte);
 		i = i+1;
 		byte = bytes[i];
 	end
@@ -87,15 +89,15 @@ end
 
 local fromHexTable = {};
 for i=0,255 do
-	fromHexTable[String.format("%02X",i)]=i;
-	fromHexTable[String.format("%02x",i)]=i;
+	fromHexTable[string.format("%02X",i)]=i;
+	fromHexTable[string.format("%02x",i)]=i;
 end
 
 Array.fromHex = function(hex)
 	local array = {};
 
-	for i=1,String.len(hex)/2 do
-		local h = String.sub(hex,i*2-1,i*2);
+	for i=1,string.len(hex)/2 do
+		local h = string.sub(hex,i*2-1,i*2);
 		array[i] = fromHexTable[h];
 	end
 
@@ -105,7 +107,7 @@ end
 
 local toHexTable = {};
 for i=0,255 do
-	toHexTable[i]=String.format("%02X",i);
+	toHexTable[i]=string.format("%02X",i);
 end
 
 Array.toHex = function(array)
