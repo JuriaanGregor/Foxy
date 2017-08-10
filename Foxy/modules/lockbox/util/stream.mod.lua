@@ -1,5 +1,6 @@
-local Queue = require("lockbox.util.queue");
-local String = require("string");
+local lockbox 	=	script.Parent.Parent;
+local Queue 	= 	require(lockbox.util.queue);
+local String 	= 	string 
 
 local Stream = {};
 

@@ -1,8 +1,9 @@
-local String = require("string");
-local Bit = require("lockbox.util.bit");
+local lockbox 	=	script.Parent.Parent;
+local String 	= 	string
+local Bit 		= 	require(lockbox.util.bit);
 
-local Array = require("lockbox.util.array");
-local Stream = require("lockbox.util.stream");
+local Array 	= 	require(lockbox.util.array);
+local Stream 	= 	require(lockbox.util.stream);
 
 local AND = Bit.band;
 local OR  = Bit.bor;

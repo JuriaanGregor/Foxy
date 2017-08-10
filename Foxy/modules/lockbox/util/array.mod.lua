@@ -1,6 +1,7 @@
-
-local String = require("string");
-local Bit = require("lockbox.util.bit");
+local String 		= 	string
+local lockbox 		= 	script.Parent.Parent;
+local Bit 			= 	require(lockbox.util.bit);
+local Queue 		= 	require(lockbox.util.queue);
 
 local XOR = Bit.bxor;
 

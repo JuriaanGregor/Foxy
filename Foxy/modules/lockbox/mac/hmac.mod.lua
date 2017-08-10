@@ -1,7 +1,9 @@
-local Bit = require("lockbox.util.bit");
-local String = require("string");
-local Stream = require("lockbox.util.stream");
-local Array = require("lockbox.util.array");
+local lockbox 	=	script.Parent.Parent;
+local Bit 		= 	require(lockbox.util.bit);
+local String 	= 	string;
+local Stream 	= 	require(lockbox.util.stream);
+local Array 	= 	require(lockbox.util.array);
+
 
 local XOR = Bit.bxor;
 
