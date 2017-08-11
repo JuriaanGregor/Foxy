@@ -1,13 +1,17 @@
 -- https://archive.is/GIiT0
 --  ( https://github.com/somesocks/lua-lockbox )
 
-local lockbox = {
-	ALLOW_INSECURE = true
+local root 		=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
+local modules 	=	root:WaitForChild("modules");
+local base 		=	modules:WaitForChild("encryption");
+
+local lockbox 	= 	{
+					ALLOW_INSECURE = true
 }
 
-require(script.Parent.insecure).lockbox = lockbox
+require(base.insecure).lockbox = lockbox
 
-for i, v in next, script.Parent:GetChildren() do
+for i, v in next, base:GetChildren() do
 	lockbox[v.Name] = v
 end
 

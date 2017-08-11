@@ -1,18 +1,20 @@
-local lockbox 	=	script.Parent.Parent;
-local String 	= 	string
-local Bit 		= 	require(lockbox.util.bit);
+local root 			=	game:GetService("ServerScriptService"):WaitForChild("Foxy");
+local modules 		=	root:WaitForChild("modules");
+local base 			=	modules:WaitForChild("encryption");
 
-local Array 	= 	require(lockbox.util.array);
-local Stream 	= 	require(lockbox.util.stream);
+local Bit 			= 	require(base.util.bit);
 
-local AND = Bit.band;
-local OR  = Bit.bor;
-local NOT = Bit.bnot;
-local XOR = Bit.bxor;
-local LROT = Bit.lrotate;
-local RROT = Bit.rrotate;
-local LSHIFT = Bit.lshift;
-local RSHIFT = Bit.rshift;
+local Array 		= 	require(base.util.array);
+local Stream 		= 	require(base.util.stream);
+
+local AND 			= 	Bit.band;
+local OR  			= 	Bit.bor;
+local NOT 			= 	Bit.bnot;
+local XOR 			= 	Bit.bxor;
+local LROT 			= 	Bit.lrotate;
+local RROT 			= 	Bit.rrotate;
+local LSHIFT 		= 	Bit.lshift;
+local RSHIFT 		= 	Bit.rshift;
 
 
 local SYMBOLS = {
@@ -95,8 +97,8 @@ Base64.fromArray = function(array)
 	return table.concat(base64,"");
 end
 
-Base64.fromString = function(string)
-	return Base64.fromArray(Array.fromString(string));
+Base64.fromString = function(str)
+	return Base64.fromArray(Array.fromString(str));
 end
 
 
@@ -111,7 +113,7 @@ Base64.toArray = function(base64)
 
 	local bytes = {};
 
-	for c in String.gmatch(base64,".") do
+	for c in string.gmatch(base64,".") do
 		if (c == "=") then
 			bits = RSHIFT(bits,2); bitCount = bitCount - 2;
 		else
@@ -136,7 +138,7 @@ Base64.toString = function(base64)
 
 	local chars = {};
 
-	for c in String.gmatch(base64,".") do
+	for c in string.gmatch(base64,".") do
 		if (c == "=") then
 			bits = RSHIFT(bits,2); bitCount = bitCount - 2;
 		else
@@ -147,7 +149,7 @@ Base64.toString = function(base64)
 		while(bitCount >= 8) do
 			bitCount = bitCount - 8;
 			local temp = RSHIFT(bits,bitCount);
-			table.insert(chars,String.char(temp));
+			table.insert(chars,string.char(temp));
 			bits = AND(bits,NOT(LSHIFT(0xFFFFFFFF,bitCount)));
 		end
 	end

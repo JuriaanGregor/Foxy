@@ -1,0 +1,7 @@
+ ☐ Clean up the Lockbox module, remove auth methods that are not currently in-use
+ ✔ Make the paths to the Lockbox module direct, instead of using script.Parent.Parent @done (17-08-11 23:16)
+ ✔ Add builders to lockbox intergation instead. @done (17-08-11 23:16)
+ ✔ Add new Application folder @done (17-08-11 23:16)
+ ☐ Add new Web class
+ ☐ Add request pool for all web request @research 
+ 
